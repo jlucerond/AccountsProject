@@ -8,14 +8,24 @@
 
 import Foundation
 
+protocol AccountControllerDelegate: class {
+   func accountsUpdated()
+}
+
 class AccountController {
-   static let shared = AccountController()
    private (set) var accounts: [Account] = []
    
-   private init() {
-      NetworkController.getAccountInfo { (accounts) in
-         if let account = accounts {
-            self.accounts = accounts
+   weak var delegate: AccountControllerDelegate?
+   
+   init() {
+      NetworkController.getAccountInfo { [weak self] (accounts) in
+         guard let strongSelf = self else {
+            return
+         }
+         
+         if let accounts = accounts {
+            strongSelf.accounts = accounts
+            strongSelf.delegate?.accountsUpdated()
          }
       }
    }

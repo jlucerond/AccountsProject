@@ -17,7 +17,7 @@ struct Account: Decodable {
    enum CodingKeys: String, CodingKey {
       case name
       case amount
-      case roi
+      case roi = "ROI"
       case identifier = "id"
    }
 }

@@ -9,20 +9,36 @@
 import UIKit
 
 class AccountsTableViewController: UITableViewController {
+   
+   let accountController = AccountController()
+   
+   override func viewDidLoad() {
+      accountController.delegate = self
+   }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AccountController.shared.accounts.count
+        return accountController.accounts.count
     }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath)
       
-      let account = AccountController.shared.accounts[indexPath.row]
+      let account = accountController.accounts[indexPath.row]
       cell.textLabel?.text = account.name
-      cell.detailTextLabel?.text = CustomFormatter.getSringFrom(dollarAmount: account.amount)
+      cell.detailTextLabel?.text = NumberFormatter.getStringFrom(dollarAmount: account.amount)
       
       return cell
    }
 
+}
+
+extension AccountsTableViewController: AccountControllerDelegate {
+   func accountsUpdated() {
+      DispatchQueue.main.async {
+         self.tableView.reloadData()
+      }
+   }
+   
+   
 }

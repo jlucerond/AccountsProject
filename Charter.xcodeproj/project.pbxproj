@@ -15,7 +15,7 @@
 		D8D86A1820F6681900C56C6C /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1720F6681900C56C6C /* AccountController.swift */; };
 		D8D86A1B20F6689300C56C6C /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1A20F6689300C56C6C /* NetworkController.swift */; };
 		D8D86A1E20F66E5800C56C6C /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */; };
-		D8D86A2020F66F4600C56C6C /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1F20F66F4600C56C6C /* CurrencyFormatter.swift */; };
+		D8D86A2020F66F4600C56C6C /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1F20F66F4600C56C6C /* NumberFormatter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		D8D86A1720F6681900C56C6C /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		D8D86A1A20F6689300C56C6C /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
-		D8D86A1F20F66F4600C56C6C /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		D8D86A1F20F66F4600C56C6C /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 				D8D86A0920F6676000C56C6C /* Assets.xcassets */,
 				D8D86A0B20F6676000C56C6C /* LaunchScreen.storyboard */,
 				D8D86A0E20F6676000C56C6C /* Info.plist */,
-				D8D86A1F20F66F4600C56C6C /* CurrencyFormatter.swift */,
+				D8D86A1F20F66F4600C56C6C /* NumberFormatter+Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 				D8D86A1E20F66E5800C56C6C /* AccountsTableViewController.swift in Sources */,
 				D8D86A0320F6675F00C56C6C /* AppDelegate.swift in Sources */,
 				D8D86A1620F667C600C56C6C /* Account.swift in Sources */,
-				D8D86A2020F66F4600C56C6C /* CurrencyFormatter.swift in Sources */,
+				D8D86A2020F66F4600C56C6C /* NumberFormatter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

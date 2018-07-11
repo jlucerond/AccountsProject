@@ -1,5 +1,5 @@
 //
-//  CurrencyFormatter.swift
+//  NumberFormatter+Extension.swift
 //  Charter
 //
 //  Created by Joe Lucero on 7/11/18.
@@ -8,12 +8,11 @@
 
 import Foundation
 
-struct CurrencyFormatter {
-   static func getSringFrom(dollarAmount: Double) -> String? {
+extension NumberFormatter {
+   static func getStringFrom(dollarAmount: Double) -> String? {
       let formatter = NumberFormatter()
       formatter.numberStyle = .currency
       
       return formatter.string(from: NSNumber(value: dollarAmount))
    }
-   
 }
