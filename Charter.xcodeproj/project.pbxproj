@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D8D86A0320F6675F00C56C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A0220F6675F00C56C6C /* AppDelegate.swift */; };
-		D8D86A0520F6675F00C56C6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A0420F6675F00C56C6C /* ViewController.swift */; };
 		D8D86A0820F6675F00C56C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86A0620F6675F00C56C6C /* Main.storyboard */; };
 		D8D86A0A20F6676000C56C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D86A0920F6676000C56C6C /* Assets.xcassets */; };
 		D8D86A0D20F6676000C56C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86A0B20F6676000C56C6C /* LaunchScreen.storyboard */; };
+		D8D86A1620F667C600C56C6C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1520F667C600C56C6C /* Account.swift */; };
+		D8D86A1820F6681900C56C6C /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1720F6681900C56C6C /* AccountController.swift */; };
+		D8D86A1B20F6689300C56C6C /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1A20F6689300C56C6C /* NetworkController.swift */; };
+		D8D86A1E20F66E5800C56C6C /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */; };
+		D8D86A2020F66F4600C56C6C /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A1F20F66F4600C56C6C /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8D869FF20F6675F00C56C6C /* Charter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D86A0220F6675F00C56C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8D86A0420F6675F00C56C6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8D86A0720F6675F00C56C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8D86A0920F6676000C56C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8D86A0C20F6676000C56C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8D86A0E20F6676000C56C6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D86A1520F667C600C56C6C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D8D86A1720F6681900C56C6C /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		D8D86A1A20F6689300C56C6C /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
+		D8D86A1F20F66F4600C56C6C /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				D8D86A0220F6675F00C56C6C /* AppDelegate.swift */,
-				D8D86A0420F6675F00C56C6C /* ViewController.swift */,
 				D8D86A0620F6675F00C56C6C /* Main.storyboard */,
+				D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */,
+				D8D86A1920F6687400C56C6C /* Model */,
+				D8D86A1C20F66E4200C56C6C /* Networking */,
+				D8D86A1420F6676B00C56C6C /* Resources */,
+			);
+			path = Charter;
+			sourceTree = "<group>";
+		};
+		D8D86A1420F6676B00C56C6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D8D86A0920F6676000C56C6C /* Assets.xcassets */,
 				D8D86A0B20F6676000C56C6C /* LaunchScreen.storyboard */,
 				D8D86A0E20F6676000C56C6C /* Info.plist */,
+				D8D86A1F20F66F4600C56C6C /* CurrencyFormatter.swift */,
 			);
-			path = Charter;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D8D86A1920F6687400C56C6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86A1520F667C600C56C6C /* Account.swift */,
+				D8D86A1720F6681900C56C6C /* AccountController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8D86A1C20F66E4200C56C6C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86A1A20F6689300C56C6C /* NetworkController.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8D86A0520F6675F00C56C6C /* ViewController.swift in Sources */,
+				D8D86A1B20F6689300C56C6C /* NetworkController.swift in Sources */,
+				D8D86A1820F6681900C56C6C /* AccountController.swift in Sources */,
+				D8D86A1E20F66E5800C56C6C /* AccountsTableViewController.swift in Sources */,
 				D8D86A0320F6675F00C56C6C /* AppDelegate.swift in Sources */,
+				D8D86A1620F667C600C56C6C /* Account.swift in Sources */,
+				D8D86A2020F66F4600C56C6C /* CurrencyFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53BVAZ8K9G;
-				INFOPLIST_FILE = Charter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Charter/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53BVAZ8K9G;
-				INFOPLIST_FILE = Charter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Charter/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
