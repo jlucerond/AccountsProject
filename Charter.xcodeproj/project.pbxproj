@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8C85C0A20F6A71F004F31EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C85C0920F6A71F004F31EE /* DetailViewController.swift */; };
 		D8D86A0320F6675F00C56C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86A0220F6675F00C56C6C /* AppDelegate.swift */; };
 		D8D86A0820F6675F00C56C6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86A0620F6675F00C56C6C /* Main.storyboard */; };
 		D8D86A0A20F6676000C56C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D86A0920F6676000C56C6C /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8C85C0920F6A71F004F31EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D8D869FF20F6675F00C56C6C /* Charter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Charter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D86A0220F6675F00C56C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D86A0720F6675F00C56C6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8C85C0820F6A393004F31EE /* View+Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86A0620F6675F00C56C6C /* Main.storyboard */,
+				D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */,
+				D8C85C0920F6A71F004F31EE /* DetailViewController.swift */,
+			);
+			path = "View+Controllers";
+			sourceTree = "<group>";
+		};
 		D8D869F620F6675F00C56C6C = {
 			isa = PBXGroup;
 			children = (
@@ -63,9 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				D8D86A0220F6675F00C56C6C /* AppDelegate.swift */,
-				D8D86A0620F6675F00C56C6C /* Main.storyboard */,
-				D8D86A1D20F66E5800C56C6C /* AccountsTableViewController.swift */,
-				D8D86A1920F6687400C56C6C /* Model */,
+				D8C85C0820F6A393004F31EE /* View+Controllers */,
+				D8D86A1920F6687400C56C6C /* Model+Controller */,
 				D8D86A1C20F66E4200C56C6C /* Networking */,
 				D8D86A1420F6676B00C56C6C /* Resources */,
 			);
@@ -83,13 +94,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D8D86A1920F6687400C56C6C /* Model */ = {
+		D8D86A1920F6687400C56C6C /* Model+Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D8D86A1520F667C600C56C6C /* Account.swift */,
 				D8D86A1720F6681900C56C6C /* AccountController.swift */,
 			);
-			path = Model;
+			path = "Model+Controller";
 			sourceTree = "<group>";
 		};
 		D8D86A1C20F66E4200C56C6C /* Networking */ = {
@@ -177,6 +188,7 @@
 				D8D86A0320F6675F00C56C6C /* AppDelegate.swift in Sources */,
 				D8D86A1620F667C600C56C6C /* Account.swift in Sources */,
 				D8D86A2020F66F4600C56C6C /* NumberFormatter+Extension.swift in Sources */,
+				D8C85C0A20F6A71F004F31EE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

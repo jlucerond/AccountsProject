@@ -9,8 +9,15 @@
 import Foundation
 
 class NetworkController {
+   private static let baseURLString = "https://glacial-bayou-77287.herokuapp.com/listAccounts"
+   
+   /**
+    Gets account data for user. If successful, the parameter [Account] will be populated with the user's accounts. If not successful, [Account] will be nil
+    
+    - Parameter completion: Completion handler for when networking is complete
+
+    */
    static func getAccountInfo(completion: @escaping (([Account]?) -> Void)) {
-      let baseURLString = "https://glacial-bayou-77287.herokuapp.com/listAccounts"
       guard let baseURL = URL(string: baseURLString) else {
          print("Invalid URL for getting account info")
          completion(nil)
@@ -62,7 +69,5 @@ class NetworkController {
       }
    }
    
-   private init() {
-      
-   }
+   private init() { }
 }

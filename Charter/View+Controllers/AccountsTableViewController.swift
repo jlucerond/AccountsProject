@@ -15,11 +15,11 @@ class AccountsTableViewController: UITableViewController {
    override func viewDidLoad() {
       accountController.delegate = self
    }
-
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return accountController.accounts.count
-    }
+   
+   // MARK: - Table view data source
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return accountController.accounts.count
+   }
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell", for: indexPath)
@@ -30,9 +30,23 @@ class AccountsTableViewController: UITableViewController {
       
       return cell
    }
-
+   
+   // MARK: - Navigation
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "ToDetailVC" {
+         guard let destinationVC = segue.destination as? DetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow else {
+               return
+         }
+         
+         let selectedAccount = accountController.accounts[indexPath.row]
+         destinationVC.account = selectedAccount
+      }
+   }
+   
 }
 
+// MARK: - AccountControllerDelegate Methods
 extension AccountsTableViewController: AccountControllerDelegate {
    func accountsUpdated() {
       DispatchQueue.main.async {

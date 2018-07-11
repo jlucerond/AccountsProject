@@ -15,4 +15,13 @@ extension NumberFormatter {
       
       return formatter.string(from: NSNumber(value: dollarAmount))
    }
+   
+   static func getStringFrom(percent: Double) -> String? {
+      let formatter = NumberFormatter()
+      formatter.numberStyle = .percent
+      formatter.multiplier = 1
+      formatter.maximumFractionDigits = 1
+      
+      return formatter.string(from: NSNumber(value: percent))
+   }
 }

@@ -20,4 +20,8 @@ struct Account: Decodable {
       case roi = "ROI"
       case identifier = "id"
    }
+   
+   var initialAmount: Double {
+      return (amount / (1 + roi/100))
+   }
 }
