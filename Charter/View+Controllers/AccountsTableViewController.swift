@@ -10,8 +10,10 @@ import UIKit
 
 class AccountsTableViewController: UITableViewController {
    
+   // MARK: - Properties
    let accountController = AccountController()
    
+   // MARK: - LifeCycle Methods
    override func viewDidLoad() {
       accountController.delegate = self
    }
@@ -53,6 +55,5 @@ extension AccountsTableViewController: AccountControllerDelegate {
          self.tableView.reloadData()
       }
    }
-   
    
 }
